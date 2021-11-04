@@ -16,8 +16,9 @@ const log = winston.createLogger({
 const app = express();
 
 app.use("/profile", require("./routes/profile"))
+app.use("/secretsanta", require("./routes/secretsanta"))
 
-app.get("/", (req, res) => res.send("Success!"))
+app.get("/", (_, res) => res.send("Success!"))
 
 app.listen({port: PORT}, () =>
   log.info(`App started on port ${PORT}`),

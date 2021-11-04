@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: secret-santa-job-{{ id }}
+data:
+  data.json: |-
+    {{{ data }}}
